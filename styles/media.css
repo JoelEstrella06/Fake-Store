@@ -1,0 +1,22 @@
+html{
+    font-size: 62.5%; /*1rem =10px ahora*/
+  }
+
+@media screen and (max-width:880px) {
+    .icon-float{  
+        top: auto;
+        bottom: 10%;
+        right: auto;
+        left: 1rem;
+    }
+    .icon-float div{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    
+    #icon-car{
+        background-color: var(--naranja);
+        border-radius: 4rem;
+    }
+    
+}
