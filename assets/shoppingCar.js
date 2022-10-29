@@ -2,6 +2,7 @@ const API = 'https://api.escuelajs.co/api/v1';
 let car=[];
 const textCar=document.getElementById("counter-car");
 const slidecar=document.getElementById("preview-car");
+const iconCar= document.getElementById("icon-car");
 async function fetcData(urlAPI){
     const response = await fetch(urlAPI);
     const data =  await response.json();
@@ -26,7 +27,7 @@ function addAcumulatorToCar(size){
     else{
         textCar.style.display="none";
         slidecar.style.display="none";
-    }
+    }       
 }
 function previewCar(car){
     let templateCar;
@@ -77,8 +78,26 @@ function reduceCar(id){
     }
     addAcumulatorToCar(car.reduce((acumulartor,elements)=>acumulartor+elements.cantidad,0));
 }
+iconCar.addEventListener("click",()=>{
+    if(car.length<=0){
+        slidecar.innerHTML=`
+            <div class="slide-preview">
+                <p>there is nothing in the car</p>
+            </div>`;
+    }
+    if(slidecar.clientHeight<=0){
+        slidecar.style.display="flex";
+        slidecar.style.maxHeight="40rem"
+        slidecar.style.border=" 0.1rem var(--gray) solid";    
+    }
+    else{
+        slidecar.style.maxHeight="0";
+        slidecar.style.border="0";
+    } 
+    console.log(slidecar.clientHeight);
+});
 
-$("#icon-car").click(()=>{
+/*$("#icon-car").click(()=>{
     if(car.length<=0){
         slidecar.innerHTML=`
             <div class="slide-preview">
@@ -86,4 +105,4 @@ $("#icon-car").click(()=>{
             </div>`;
     }
     $("#preview-car").slideToggle();
-});
+});*/

@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap');
 :root{
   --naranja:#E9850E;
-  --button:#e9b714;
-  --buttonHover:#ca9f11;
+  --button:#FF6903;
+  --buttonHover:#693C06;
   --gray:#dbd9d9; 
-  --colorMore:#8f4805ee; 
 }
 *{
 	margin: 0px;
@@ -13,10 +13,8 @@
 html{
   font-size: 62.5%; /*1rem =10px ahora*/
 }
-a{
-	display: inline-block;
-	text-decoration: none;
-	color: black;
+body{
+  font-family: 'Nunito', sans-serif;
 }
 .centrado{
 	max-width: 120rem;
@@ -88,9 +86,14 @@ nav div{
 }
 .main-product div h3{
   font-size: 1.8rem;
+  font-weight: bold;
 }
 .main-product div p{
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.main-product div p b{
+ font-size: 1.8rem;
 }
 .main-product figure{
   max-height: 30rem;
@@ -115,12 +118,12 @@ figure img{
   padding-top: 1rem;
 }
 #btn_more{
-  border: 1px black solid;
+  border: 0;
   border-radius: 0.5rem;
   cursor: pointer;
-  padding: 1rem;
+  padding: 1.2rem;
   color: white;
-  background-color: var(--colorMore);
+  background-color: var(--button);
 }
 .icon-float{
   position: absolute;
@@ -152,16 +155,13 @@ figure img{
 #preview-car{
   font-size:1.6rem;
   width: 30rem;
-  max-height: 40rem;
   flex-direction:row;
   align-items: center;
   background-color: white;
   text-align: center;
-  border: 0.1rem var(--gray) solid;
   border-radius: 0.5rem;
-  /*left: calc(0% - 15rem);*/
   overflow-y: scroll;
-  display: none;
+  transition: 0.5s all;
 }
 #preview-car div{
   padding: 1rem 0;
@@ -175,6 +175,7 @@ figure img{
 }
 #preview-car hr{
   margin: 0 1rem;
+  width: 80%;
 }
 .slide-preview{
   display: flex;

@@ -13,7 +13,7 @@ function innerTemplate(Products){
             </figure>
             <div>
                 <h3>${item.title}</h3>
-                <p>Price: $ ${item.price}</p>
+                <p>Price: <b>$ ${item.price}</b></p>
                 <button type"button" class="add-car" onclick="clickADD(${item.id});">Add to car</buton>
             </div>   
         </div>
