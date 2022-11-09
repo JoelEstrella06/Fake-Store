@@ -68,8 +68,9 @@ nav div{
   padding: 3rem 0;
   gap: 1.2rem;
   background-color: var(--gray);
-  max-height: 80rem;
+  height: 80rem;
   overflow:auto;
+  align-items: center;
 }
 .main-product{
   background: white;
@@ -227,9 +228,9 @@ figure img{
 /*stilos para la barra de carga*/
 
 .line-wobble {
-    --uib-size: 100px;
+    --uib-size: 150px;
     --uib-speed: 1.75s;
-    --uib-line-weight: 5px;
+    --uib-line-weight: 10px;
     position: relative;
     display: flex;
     align-items: center;
