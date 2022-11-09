@@ -16,6 +16,9 @@ html{
 body{
   font-family: 'Nunito', sans-serif;
 }
+section{
+  position: relative;
+}
 .centrado{
 	max-width: 120rem;
 	margin: auto;
@@ -64,13 +67,18 @@ nav div{
 #btn_search svg path{
   fill: #bdb3b3;
 }
+#loader{
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 75px);
+}
 #things{
   padding: 3rem 0;
   gap: 1.2rem;
   background-color: var(--gray);
   height: 80rem;
   overflow:auto;
-  align-items: center;
+  /*align-items: center;*/
 }
 .main-product{
   background: white;
@@ -164,6 +172,7 @@ figure img{
   border-radius: 0.5rem;
   overflow-y: scroll;
   transition: 0.5s all;
+  max-height: 0;
 }
 #preview-car div{
   padding: 1rem 0;
@@ -240,6 +249,7 @@ figure img{
     border-radius: calc(var(--uib-line-weight) / 2);
     overflow: hidden;
     transform: translate3d(0, 0, 0);
+    align-self: center;
   }
   
   .line-wobble::before {
